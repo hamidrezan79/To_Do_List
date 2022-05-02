@@ -38,6 +38,26 @@ header {
 
 }
 
+.them {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dark{
+    display: none;
+}
+.fa-moon {
+    margin-top: 20px;
+    font-size: 25px;
+    
+}
+
+.fa-sun {
+    margin-top: 20px;
+    font-size: 25px;
+    color: #FFC107;
+}
+
 .menu-icon {
     margin-left: 50px;
     margin-top: 40px;
@@ -344,6 +364,7 @@ form button {
     color: var(--main-white);
     background-color: var(--primary-color);
 }
+
 /* 
 @media(min-width:500px) {
     .add-todo {

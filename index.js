@@ -10,6 +10,9 @@ const addTodo = document.querySelector(".todo-button");
 const todoInput = document.querySelector(".todo-input");
 const todoList = document.querySelector(".task-box");
 const menu = document.querySelector(".menu");
+const light=document.querySelector(".light");
+const dark=document.querySelector(".dark");
+const lightIcon=document.querySelector(".fa-sun");
 
 // event listener
 openMenu.addEventListener("click", open);
@@ -19,7 +22,27 @@ addTodo.addEventListener("click", createList);
 todoList.addEventListener("click", checkRemove);
 menu.addEventListener("click", filterMenu);
 document.addEventListener("DOMContentLoaded", getLocalTodos)
+light.addEventListener("click",lightMod);
+dark.addEventListener("click",darkMod);
+
 // function
+function lightMod(){
+    document.body.style.backgroundColor="#EEEEEE";
+    openMenu.style.color="#020527";
+    closeMenu.style.color="#020527";
+    light.style.display="none";
+    close();
+    dark.style.display="flex";
+
+}
+function darkMod(){
+    document.body.style.backgroundColor="#020527";
+    openMenu.style.color="#fff";
+    closeMenu.style.color="#fff";
+    light.style.display="flex";
+    close();
+    dark.style.display="none";
+}
 function open() {
     header.style.display = "flex";
     closeMenu.style.display = "flex";
